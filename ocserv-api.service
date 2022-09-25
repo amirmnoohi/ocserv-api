@@ -1,0 +1,13 @@
+[Unit]
+Description=OCSERV API Server
+After=network.target
+StartLimitBurst=0
+
+[Service]
+Type=simple
+WorkingDirectory=/home
+ExecStart=/usr/local/bin/uwsgi --http 0.0.0.0:8080 --master -p 4 -w wsgi:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
