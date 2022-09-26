@@ -72,7 +72,7 @@ def lock():
 @app.route('/unlock', methods=['POST'])
 def unlock():
     username = param('username')
-    command = f'sudo /usr/bin/ocpasswd  -c /etc/ocserv/ocpasswd -l {username}'
+    command = f'sudo /usr/bin/ocpasswd  -c /etc/ocserv/ocpasswd -u {username}'
     os.system(command)
     return output({"code": 200}, 200)
 
