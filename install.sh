@@ -13,3 +13,5 @@ mv wsgi.py /home
 systemctl daemon-reload
 
 service ocserv-api start
+
+firewall-cmd --permanent --add-port=8080/tcp
