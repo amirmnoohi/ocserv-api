@@ -15,3 +15,5 @@ systemctl daemon-reload
 service ocserv-api start
 
 firewall-cmd --permanent --add-port=8080/tcp
+
+firewall-cmd --reload
