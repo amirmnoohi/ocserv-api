@@ -4,6 +4,14 @@ pip3 install flask
 
 pip3 install uwsgi
 
+mkdir -p /opt
+
+cd /opt
+
+git clone https://github.com/amirmnoohi/ocserv-api.git
+
+cd ocserv-api
+
 mv ocserv-api.service /etc/systemd/system
 
 mv ocservapi.py /home
