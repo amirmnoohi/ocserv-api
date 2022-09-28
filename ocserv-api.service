@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/opt/ocserv-api
+WorkingDirectory=/opt/ocservapi
 ExecStart=/usr/local/bin/uwsgi --http 0.0.0.0:8080 --master -p 4 -w wsgi:app
 Restart=always
 StartLimitBurst=0
