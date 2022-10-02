@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-
 INSTALL_DIR=/opt/ocservapi
 
 ################# INSTALL PRE REQUIREMENTS #################
@@ -16,9 +14,9 @@ pip3 install uwsgi
 
 mkdir -p $INSTALL_DIR
 
-mv ocservapi.py $INSTALL_DIR
+cd .. && mv ocserv-api $INSTALL_DIR && cd $INSTALL_DIR || exit
 
-mv wsgi.py $INSTALL_DIR
+chmod +x update.sh
 
 ############################################################
 

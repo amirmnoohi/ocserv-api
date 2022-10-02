@@ -68,6 +68,7 @@ def lock():
     os.system(command)
     return output({"code": 200}, 200)
 
+
 @app.route('/disconnect', methods=['POST'])
 def disconnect():
     username = param('username')

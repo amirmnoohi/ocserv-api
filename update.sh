@@ -1,4 +1,6 @@
-cd /opt/ocserv-api
+#!/usr/bin/env bash
+
+cd /opt/ocserv-api || exit
 
 git pull
 
