@@ -14,7 +14,7 @@ pip3 install uwsgi
 
 mkdir -p $INSTALL_DIR
 
-cd .. && mv ocserv-api $INSTALL_DIR && cd $INSTALL_DIR || exit
+cd .. && mv ocserv-api/* $INSTALL_DIR && cd $INSTALL_DIR || exit
 
 chmod +x update.sh
 
