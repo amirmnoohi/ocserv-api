@@ -38,6 +38,6 @@ firewall-cmd --reload
 ################### START OCSERV-API #######################
 
 service ocserv-api start
-
+systemctl enable ocserv-api
 ############################################################
 
