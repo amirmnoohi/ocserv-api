@@ -79,7 +79,7 @@ def disconnect():
 @app.route('/disconnect/id', methods=['POST'])
 def disconnect():
     id = param('id')
-    command = f'sudo occtl disconnect user {id}'
+    command = f'sudo occtl disconnect id {id}'
     os.system(command)
     return output({"code": 200}, 200)
     
