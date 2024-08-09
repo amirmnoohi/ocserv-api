@@ -76,7 +76,13 @@ def disconnect():
     os.system(command)
     return output({"code": 200}, 200)
 
-
+@app.route('/disconnect/id', methods=['POST'])
+def disconnect():
+    id = param('id')
+    command = f'sudo occtl disconnect user {id}'
+    os.system(command)
+    return output({"code": 200}, 200)
+    
 @app.route('/unlock', methods=['POST'])
 def unlock():
     username = param('username')
