@@ -42,7 +42,7 @@ def users():
 def add_user():
     username = param('username')
     password = param('password')
-    command = f'/usr/bin/echo -e "{password}\n{password}\n"|sudo /usr/bin/ocpasswd -c /etc/ocserv/ocpasswd {username}'
+    command = f"/usr/bin/echo -e '{password}\n{password}\n'|sudo /usr/bin/ocpasswd -c /etc/ocserv/ocpasswd '{username}'"
     os.system(command)
     return output({"code": 200}, 200)
 
@@ -95,7 +95,7 @@ def unlock():
 def change_password():
     username = param('username')
     password = param('password')
-    command = f'/usr/bin/echo -e "{password}\n{password}\n"|sudo /usr/bin/ocpasswd -c /etc/ocserv/ocpasswd {username}'
+    command = f"/usr/bin/echo -e '{password}\n{password}\n'|sudo /usr/bin/ocpasswd -c /etc/ocserv/ocpasswd '{username}'"
     os.system(command)
     return output({"code": 200}, 200)
 
