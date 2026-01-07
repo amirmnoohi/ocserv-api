@@ -2,6 +2,9 @@
 
 set -e
 
+# Get the directory where the script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 INSTALL_DIR=/opt/ocservapi
 VENV_DIR=$INSTALL_DIR/venv
 
@@ -49,7 +52,7 @@ install_dependencies() {
 install_app() {
     mkdir -p $INSTALL_DIR
 
-    cp -r . $INSTALL_DIR
+    cp -r "$SCRIPT_DIR"/* $INSTALL_DIR/
     cd $INSTALL_DIR || exit
 
     chmod +x update.sh
